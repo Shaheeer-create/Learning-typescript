@@ -1,21 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var prompt = require('prompt-sync')();
-let n1 = parseInt(prompt("please enter your first value:"));
-let n2 = parseInt(prompt("please enter your second value:"));
-let Operator = prompt("please enter your Operator(+,-,*,/):");
-if (Operator == "+") {
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1 + n2}`);
+let prompt = require('prompt-sync')();
+let n = parseInt(prompt(`please enter number of rows`));
+let a = "";
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+        a += "*";
+    }
+    a += "\n";
 }
-else if (Operator == "-") {
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1 - n2}`);
-}
-else if (Operator == "*") {
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1 * n2}`);
-}
-else if (Operator == "/") {
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1 / n2}`);
-}
-else {
-    console.log("You put incorrect Value");
-}
+console.log(a);

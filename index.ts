@@ -1,29 +1,18 @@
- import { log } from "console";
+import { log } from "console";
 
-var prompt = require('prompt-sync')();
-let n1=parseInt(prompt("please enter your first value:"))
-let n2=parseInt(prompt("please enter your second value:"))
-let Operator=prompt("please enter your Operator(+,-,*,/):")
-if(Operator=="+"){
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1+n2}`);
-    
-}
- else if(Operator=="-"){
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1-n2}`);
-    
-}
- else if(Operator=="*"){
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1*n2}`);
-    
-}
- else if(Operator=="/"){
-    console.log(`The Answer of${n1} ${Operator} ${n2}=${n1/n2}`);
-    
-}
-else{
-    console.log("You put incorrect Value");
-    
-}
-    
+let prompt = require('prompt-sync')();
 
-export {};
+
+let n:number=parseInt(prompt(`please enter number of rows`));
+let a:string="";
+for(let i:number=1; i<=n; i++){
+   
+    
+    for(let j:number=1; j<=i; j++){
+    a+="*";
+    }
+a +="\n";
+
+}
+console.log(a);
+ export{}
